@@ -24,12 +24,8 @@ public class SwitchWindowInEdge {
     @BeforeMethod
     public void launchBrowser() throws Exception {
         System.out.println("launching Microsoft Edge browser");
-        /*System.setProperty("webdriver.edge.driver", driverPath+"MicrosoftWebDriver.exe");
-        driver = new EdgeDriver();*/
-        EdgeDriverManager.getInstance().setup();
-        DesiredCapabilities caps = DesiredCapabilities.edge();
-        URL url = new URL("http://172.21.77.24:5555/wd/hub");
-        driver = new RemoteWebDriver(url, caps);
+        System.setProperty("webdriver.edge.driver", driverPath+"MicrosoftWebDriver.exe");
+        driver = new EdgeDriver();
     }
 
     @Test()
